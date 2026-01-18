@@ -47,8 +47,7 @@ class OdometryNode(Node):
         delta_left_position = current_left_position - self.left_wheel_position_old
         delta_right_position = current_right_position - self.right_wheel_position_old
 
-        #Use self.robot.forward_kinematics to get dist and angle change
-        # NEW (Swap them!)
+
         d_linear, delta_theta = self.robot.forward_kinematics(delta_right_position, delta_left_position)
 
         #update the position
