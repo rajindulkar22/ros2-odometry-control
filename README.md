@@ -14,12 +14,10 @@ The primary goal of this project is to demonstrate the **limitations of Dead Rec
   * "Turn-then-Move" logic for precise navigation.
   * Dynamic heading correction.
   * Distance-based arrival checking.
-  ## Results
-Here is the robot navigating in Rviz and the resulting drift analysis.
 
 ### Drift Analysis (Ground Truth vs Estimation)
 ![PlotJuggler graph showing drift between odom and ground truth](https://github.com/rajindulkar22/ros2-odometry-control/blob/main/Screenshot%20from%202026-01-18%2015-08-41.png)
-*The red line (odometry estimate) slowly diverges from the green line (ground truth) due to accumulated sensor noise.*
+*The red line (odometry estimate) slowly diverges from the blue line (ground truth) due to accumulated sensor noise.*
 
 ## Tech Stack
 * **Framework:** ROS 2 Humble
