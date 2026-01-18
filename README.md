@@ -6,10 +6,14 @@ This project is a complete robotics software pipeline built from scratch in **RO
 The primary goal of this project is to demonstrate the **limitations of Dead Reckoning** by visualizing Sensor Noise and Integration Drift in real-time without relying on external simulators like Gazebo.
 
 ## Features
-* **Physics Engine:** Custom kinematic simulator simulating wheel slip and Gaussian sensor noise.
-* **Odometry System:** Real-time Dead Reckoning estimation using encoder data.
-* **Closed-Loop Control:** Proportional controller with heading correction and "turn-then-move" logic.
-* **Analysis:** Real-time drift visualization using PlotJuggler (Ground Truth vs. Estimation).
+* **Custom Physics Engine:** A lightweight Python-based simulator that replaces heavy tools like Gazebo.
+  * Implements differential drive kinematics.
+  * Simulates **Gaussian Sensor Noise** on wheel encoders ($\mu=0, \sigma=0.05$).
+* **Odometry System:** Real-time state estimation using raw encoder data and Euler integration.
+* **Autonomous Controller:** A Proportional (P) Controller capable of:
+  * "Turn-then-Move" logic for precise navigation.
+  * Dynamic heading correction.
+  * Distance-based arrival checking.
 
 ## Tech Stack
 * **Framework:** ROS 2 Humble
@@ -20,3 +24,8 @@ The primary goal of this project is to demonstrate the **limitations of Dead Rec
 1. **Simulation:** `ros2 run odometry_control physics_node`
 2. **Estimation:** `ros2 run odometry_control odometry`
 3. **Control:** `ros2 run odometry_control goal_controller`
+
+## Future Improvements
+* **Extended Kalman Filter (EKF):** Implement sensor fusion with IMU data to correct drift.
+* **SLAM Integration:** Add Lidar simulation to enable Simultaneous Localization and Mapping.
+* **Launch Files:** Migrate to ROS 2 Launch files to start all nodes with a single command.
