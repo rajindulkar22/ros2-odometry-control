@@ -1,7 +1,3 @@
-'''Objective: Build a node that acts like the robot's "internal compass."
- Constraint: You are not allowed to peek at the physics_node's position.
- You must calculate your position strictly by listening to how much the wheels have turned (/joint_states).'''
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, Quaternion, TransformStamped
