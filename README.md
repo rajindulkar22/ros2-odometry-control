@@ -1,7 +1,9 @@
 # Custom Odometry & Control Stack (ROS 2 Humble)
 
 ## Overview
-This project is a custom implementation of a differential drive robot simulation and control stack, built entirely from scratch in Python and ROS 2. It demonstrates the full robotics pipeline: Kinematics -> Simulation -> Estimation -> Control -> Analysis.
+This project is a complete robotics software pipeline built from scratch in **ROS 2 Humble**. It simulates a differential drive robot, estimates its position using dead reckoning (odometry), and autonomously navigates to target coordinates using a closed-loop controller.
+
+The primary goal of this project is to demonstrate the **limitations of Dead Reckoning** by visualizing Sensor Noise and Integration Drift in real-time without relying on external simulators like Gazebo.
 
 ## Features
 * **Physics Engine:** Custom kinematic simulator simulating wheel slip and Gaussian sensor noise.
