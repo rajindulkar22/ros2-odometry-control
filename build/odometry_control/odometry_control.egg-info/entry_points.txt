@@ -1,0 +1,7 @@
+[console_scripts]
+goal_controller = odometry_control.goal_controller:main
+odometry = odometry_control.odometry:main
+physics_node = odometry_control.physics_node:main
+sensor_fusion = odometry_control.sensor_fusion:main
+square_drive = odometry_control.square_drive:main
+

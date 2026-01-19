@@ -28,6 +28,7 @@ setup(
             'odometry = odometry_control.odometry:main',
             'square_drive = odometry_control.square_drive:main',
             'goal_controller = odometry_control.goal_controller:main',
+            'sensor_fusion = odometry_control.sensor_fusion:main',
         ],
     },
 )

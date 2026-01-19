@@ -1,0 +1,50 @@
+running egg_info
+creating build/odometry_control/odometry_control.egg-info
+writing build/odometry_control/odometry_control.egg-info/PKG-INFO
+writing dependency_links to build/odometry_control/odometry_control.egg-info/dependency_links.txt
+writing entry points to build/odometry_control/odometry_control.egg-info/entry_points.txt
+writing requirements to build/odometry_control/odometry_control.egg-info/requires.txt
+writing top-level names to build/odometry_control/odometry_control.egg-info/top_level.txt
+writing manifest file 'build/odometry_control/odometry_control.egg-info/SOURCES.txt'
+reading manifest file 'build/odometry_control/odometry_control.egg-info/SOURCES.txt'
+writing manifest file 'build/odometry_control/odometry_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build
+creating /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib
+creating /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/diff_drive.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/odometry.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/__init__.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/goal_controller.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/square_drive.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+copying odometry_control/physics_node.py -> /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control
+running install
+running install_lib
+creating /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/diff_drive.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/odometry.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/__init__.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/goal_controller.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/square_drive.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+copying /home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/build/lib/odometry_control/physics_node.py -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/diff_drive.py to diff_drive.cpython-310.pyc
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/odometry.py to odometry.cpython-310.pyc
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/goal_controller.py to goal_controller.cpython-310.pyc
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/square_drive.py to square_drive.cpython-310.pyc
+byte-compiling /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control/physics_node.py to physics_node.cpython-310.pyc
+running install_data
+creating /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/share/ament_index
+creating /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/share/ament_index/resource_index
+creating /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/share/ament_index/resource_index/packages
+copying resource/odometry_control -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/share/odometry_control
+running install_egg_info
+Copying build/odometry_control/odometry_control.egg-info to /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/python3.10/site-packages/odometry_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing goal_controller script to /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/odometry_control
+Installing odometry script to /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/odometry_control
+Installing physics_node script to /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/odometry_control
+Installing square_drive script to /home/raj/raj_prac_ws/src/odometry_control/install/odometry_control/lib/odometry_control
+writing list of installed files to '/home/raj/raj_prac_ws/src/odometry_control/build/odometry_control/install.log'

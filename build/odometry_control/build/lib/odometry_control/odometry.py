@@ -29,7 +29,6 @@ class OdometryNode(Node):
         self.left_wheel_position_old =0.0
         self.right_wheel_position_old =0.0
         self.first_run = True
-        self.last_time = self.get_clock().now()
 
 
         self.publisher = self.create_publisher(Odometry,"odom",10)
@@ -45,14 +44,8 @@ class OdometryNode(Node):
         if self.first_run:
             self.left_wheel_position_old = current_left_position
             self.right_wheel_position_old = current_right_position
-            self.last_time = self.get_clock().now()
             self.first_run = False
             return
-
-        #calculate the time elapsed
-        current_time = self.get_clock().now()
-        dt = (current_time - self.last_time).nanoseconds / 1e9
-        self.last_time = current_time
 
         #calculate the change which is delta
         delta_left_position = current_left_position - self.left_wheel_position_old
@@ -62,10 +55,6 @@ class OdometryNode(Node):
         # NEW (Swap them!)
         d_linear, delta_theta = self.robot.forward_kinematics(delta_right_position, delta_left_position)
 
-        #update the speed
-        linear_velocity = d_linear / dt
-        angular_velocity = delta_theta / dt
-
         #update the position
         self.theta += delta_theta
         self.x += d_linear * math.cos(self.theta)
@@ -74,12 +63,10 @@ class OdometryNode(Node):
         self.left_wheel_position_old = current_left_position
         self.right_wheel_position_old = current_right_position
 
-        self.publish_odometry(linear_velocity, angular_velocity)
+        self.publish_odometry()
 
-    def publish_odometry(self, linear_velocity, angular_velocity):
+    def publish_odometry(self):
         msg = Odometry()
-        msg.twist.twist.linear.x = linear_velocity
-        msg.twist.twist.angular.z = angular_velocity
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "odom"
         msg.child_frame_id = "base_link"
