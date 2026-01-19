@@ -1,7 +1,3 @@
-'''Objective: Build a node that acts like the robot's "internal compass."
- Constraint: You are not allowed to peek at the physics_node's position.
- You must calculate your position strictly by listening to how much the wheels have turned (/joint_states).'''
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, Quaternion, TransformStamped
@@ -58,8 +54,7 @@ class OdometryNode(Node):
         delta_left_position = current_left_position - self.left_wheel_position_old
         delta_right_position = current_right_position - self.right_wheel_position_old
 
-        #Use self.robot.forward_kinematics to get dist and angle change
-        # NEW (Swap them!)
+
         d_linear, delta_theta = self.robot.forward_kinematics(delta_right_position, delta_left_position)
 
         #update the speed
