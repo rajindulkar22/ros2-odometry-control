@@ -29,10 +29,6 @@ A lightweight Python node (`physics_node`) that acts as the "Real World" simulat
 ### 4. Autonomous Controller
 * **Algorithm:** A Proportional (P) Controller capable of autonomous navigation.
 * **Logic:** Uses a "Turn-then-Move" strategy for precise movement to specific target coordinates ($x, y$).
-## Tech Stack
-* **Framework:** ROS 2 Humble
-* **Language:** Python 3.10
-* **Tools:** Rviz2, PlotJuggler, TF2
 
 ## Results
 I validated the performance of the Level 2 Fusion Node using PlotJuggler to compare the estimated paths against the Ground Truth.
