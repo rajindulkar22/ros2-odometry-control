@@ -36,9 +36,17 @@ A lightweight Python node (`physics_node`) that acts as the "Real World" simulat
 
 ## Results
 I validated the performance of the Level 2 Fusion Node using PlotJuggler to compare the estimated paths against the Ground Truth.
+* **Ground_truth:** The actual physical path (Perfect circle). 
+<img src="results/ground_truth.png" width="600">
 
+* **Raw_Odometry:**  Drifts significantly over time due to accumulated error.
+<img src="results/drift.png" width="600">
 
-## Future Improvements
-* **Extended Kalman Filter (EKF):** Implement sensor fusion with IMU data to correct drift.
-* **SLAM Integration:** Add Lidar simulation to enable Simultaneous Localization and Mapping.
-* **Launch Files:** Migrate to ROS 2 Launch files to start all nodes with a single command.
+* **Sensor Fusion:** The filtered estimate. It tracks the Ground Truth almost perfectly by correcting heading errors using the IMU.
+<img src="results/filtered.png" width="600">
+
+##  Tech Stack
+* **Framework:** ROS 2 Humble
+* **Language:** Python 3.10
+* **Visualization:** Rviz2, PlotJuggler
+* **Libraries:** `rclpy`, `tf2_ros`, `geometry_msgs`, `nav_msgs`, `sensor_msgs`
