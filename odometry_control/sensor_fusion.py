@@ -1,9 +1,3 @@
-'''The GoalWe are going to modify sensor_fusion.py to create a Frankenstein Robot Estimation:
-It takes its Speed ($v$) from the Wheels (Odometry).
-It takes its Turning ($\omega$) from the IMU (Gyro).
-It ignores the Wheels' opinion on rotation (because they drift).
-It ignores the IMU's opinion on distance (because it can't measure it).'''
-
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
